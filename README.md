@@ -2,7 +2,7 @@
 
 ### Wendy Leuenberger, [Jeffrey W. Doser](https://www.jeffdoser.com/), Michael W. Belitz, Leslie Ries, Nick M. Haddad, Wayne E. Thogmartin, and [Elise F. Zipkin](https://zipkinlab.org/)
 
-### In review
+### In review: files and code will undergo additional cleaning alongside manuscript revisions.
 
 ### Please contact the first author for questions about the code or data: Wendy Leuenberger (leuenbe9@msu.edu)
 
