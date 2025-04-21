@@ -36,6 +36,7 @@ Insects are declining worldwide (Wepprich et al. 2019, van Klink et al. 2020, Fo
     3. [Diversity.R](Code/R/Diversity.R): Calculates species-specific, group, and overall patterns in evenness (Shannon diversity). 
 5. Synthesis:
     1. [MultiMetricFigures.R](Code/R/MultiMetricFigures.R): Takes output from Abundances.R, Richness.R, and Diversity.R to make composite figures (Figure 2) and tables. 
+    2. [Map_Figure1.R](Code/R/Map_Figure1.R): Takes survey data and creates a map of the number of surveys per location (Figure 1). 
 
 ## Data availability statement:
 Covariate data will be made available before publication and is available upon request during peer review. Butterfly data are proprietary and were obtained from the North American Butterfly Association (https://www.naba.org/), the Iowa Butterfly Survey Network (https://www.reimangardens.com/collections/insects/iowa-butterfly-survey-network/), the Illinois Butterfly Monitoring Network (https://bfly.org/), the Michigan Butterfly Network (https://michiganbutterfly.org/) and the Ohio Lepidopterists (http://www.ohiolepidopterists.org/). These data may be available upon reasonable request to LR and with permission from the aforementioned programs.
