@@ -1,8 +1,8 @@
-# Three decades of declines restructure butterfly communities in the Midwestern U.S.
+# Three decades of declines restructure butterfly communities in the Midwestern United States
 
 ### Wendy Leuenberger, [Jeffrey W. Doser](https://www.jeffdoser.com/), Michael W. Belitz, Leslie Ries, Nick M. Haddad, Wayne E. Thogmartin, and [Elise F. Zipkin](https://zipkinlab.org/)
 
-### In review: files and code will undergo additional cleaning alongside manuscript revisions.
+### In revision
 
 ### Please contact the first author for questions about the code or data: Wendy Leuenberger (leuenbe9@msu.edu)
 
@@ -38,6 +38,8 @@ Insects are declining worldwide (Wepprich et al. 2019, van Klink et al. 2020, Fo
     1. [MultiMetricFigures.R](Code/R/MultiMetricFigures.R): Takes output from Abundances.R, Richness.R, and Diversity.R to make composite figures (Figure 2) and tables. 
     2. [Map_Figure1.R](Code/R/Map_Figure1.R): Takes survey data and creates a map of the number of surveys per location (Figure 1). 
 
+*Note that additional folders (e.g. 'Output', 'Output/1_runs') would be necessary to save output from the Post-process, Results, and Synthesis steps, as specified in the code.*
+
 ## Data
 
 ### Butterfly observation data
@@ -48,7 +50,6 @@ Proprietary; see below for data availability statement
 3. [Pb-route-latlon-IA-IL-MI.xlsx]: Survey-level information (route, state, county, GPS location) from the Illinois Butterfly Monitoring Network, the Iowa Butterfly Survey Network, and the Michigan Butterfly Network
 4. [GU Ohio 2022 Flat File All Observations.xlsx]: Butterfly surveys (location, date, GPS coordinates, duration) and observations (species name, species code, number observed) from the Ohio Lepidopterists. 
 
-
 ### Covariate data
 1. [CountyCovariates_percOpenNoWaterNoUrb.csv](Data/CountyCovariates_percOpenNoWaterNoUrb.csv): County-level data on proportion of open land, excluding water and urban land covers.
 2. [totalSites_propOpen_noWaternoUrb.csv](Data/totalSites_propOpen_noWaternoUrb.csv): Site-level data on proportion of open land, excluding water and urban land covers. Includes location ID and program.
@@ -56,9 +57,12 @@ Proprietary; see below for data availability statement
 ### Miscellaneous data
 1. [BflyNames.csv](Data/BflyNames.csv): Contains family, NABA Code (`UMD_Code`), scientific name, common name, and additional information about each species in the NABA dataset. 
 2. [ButterflyTraitGroups.csv](Data/ButterflyTraitGroups.csv): Initial functional trait groupings for butterfly species, based on LepTraits and expert knowledge. Split species into four groups: migratory, resident univoltine, resident generalist, and resident specialist. Includes a count of observations, but those numbers are not the final count. 
+3. [sbus.traits_w_disturb.nov2023.csv](Data/sbus.traits_w_disturb.nov2023.csv): Trait data from [Edwards et al. 2025](https://www.science.org/doi/10.1126/science.adp4671), used for overwintering (diapause) data. 
+4. [TraitsButterflyCrossley.csv](https://github.com/mcrossley3/NorthAmericanButterflies/tree/master): Trait data from [Crossley et al. 2025](https://onlinelibrary.wiley.com/doi/10.1111/gcb.15582), used to check a couple of overwintering stages (diapause).
+5. [CountyKey.RData](Data/CountyKey.RData): County indicator and county name, used to keep track of which county is which during post-processing. Originally created in [TryModel_spAbundance.R](Code/R/TryModel_spAbundance.R), line 214 (commented out)
 
 ## Data availability statement:
-Covariate data will be made available before publication and is available upon request during peer review. Butterfly data are proprietary and were obtained from the North American Butterfly Association (https://www.naba.org/), the Iowa Butterfly Survey Network (https://www.reimangardens.com/collections/insects/iowa-butterfly-survey-network/), the Illinois Butterfly Monitoring Network (https://bfly.org/), the Michigan Butterfly Network (https://michiganbutterfly.org/) and the Ohio Lepidopterists (http://www.ohiolepidopterists.org/). These data may be available upon reasonable request to LR and with permission from the aforementioned programs.
+Covariate data and data regarding names and groups are available. Butterfly data are proprietary and were obtained from the North American Butterfly Association (https://www.naba.org/), the Iowa Butterfly Survey Network (https://www.reimangardens.com/collections/insects/iowa-butterfly-survey-network/), the Illinois Butterfly Monitoring Network (https://bfly.org/), the Michigan Butterfly Network (https://michiganbutterfly.org/) and the Ohio Lepidopterists (http://www.ohiolepidopterists.org/). These data may be available upon reasonable request to LR and with permission from the aforementioned programs.
 
 ## Code availability statement: 
 Code needed to run analyses (R scripts) is available at this GitHub repository: https://github.com/wleuenberger/ButterflyCommunityTrends.
