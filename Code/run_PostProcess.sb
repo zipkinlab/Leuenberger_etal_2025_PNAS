@@ -1,0 +1,39 @@
+#!/bin/bash --login
+
+# how long?
+#SBATCH --time=48:00:00
+
+# how much memory?
+#SBATCH --mem=15G
+
+# specify nodes needed.
+#SBATCH --ntasks=1
+
+# specify CPUs (or cores per task)
+#SBATCH --cpus-per-task=1
+
+# specify which development nodes you want the job run on.
+#SBATCH --constraint="[intel16|intel18]"
+
+# email me
+#SBATCH --mail-type=BEGIN,FAIL,END
+#SBATCH --mail-user=leuenbe9@msu.edu
+
+# change to current directory
+cd $SLURM_SUBMIT_DIR
+
+# export R_LIBS_USER=/mnt/home/leuenbe9/R_Lib/4.0.2-X11-20200622
+
+# add necessary modules
+module purge
+module load R-bundle-CRAN/2023.12-foss-2023a
+R --no-environ
+
+# run R commandline with the Rscript command
+# Rscript Code/R/PostProcess_MsAbund.R 
+Rscript Code/R/Diversity.R
+# Rscript Code/R/Richness.R
+
+squeue -l $SLURM_JOB_ID
+
+scontrol show job $SLURM_JOB_ID
