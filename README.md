@@ -51,10 +51,10 @@ Insects are declining worldwide. These declines have been documented across taxo
 
 ### Butterfly observation data
 Proprietary; see below for data availability statement
-1. [NABAAllData_1977toOct2022.csv]: Data from NABA surveys. Includes survey information (location, date, GPS coordinates, party hours [time spent surveying x number of people]) as well as butterflies observed (species name, species code, number observed). 
-2. [IA IL MI Pollardbase data through 10.04.2023.xlsx]: Butterfly surveys (location, date, GPS coordinates, duration) and observations (species name, species code, number observed) from the Illinois Butterfly Monitoring Network, the Iowa Butterfly Survey Network, and the Michigan Butterfly Network. 
-3. [Pb-route-latlon-IA-IL-MI.xlsx]: Survey-level information (route, state, county, GPS location) from the Illinois Butterfly Monitoring Network, the Iowa Butterfly Survey Network, and the Michigan Butterfly Network
-4. [GU Ohio 2022 Flat File All Observations.xlsx]: Butterfly surveys (location, date, GPS coordinates, duration) and observations (species name, species code, number observed) from the Ohio Lepidopterists. 
+1. [NABAAllData_1977toOct2022.csv](https://github.com/zipkinlab/Archived-data/blob/master/Leuenberger_etal_2025_PNAS/NABAAllData_1977toOct2022.csv): Data from NABA surveys. Includes survey information (location, date, GPS coordinates, party hours [time spent surveying x number of people]) as well as butterflies observed (species name, species code, number observed). 
+2. [IA IL MI Pollardbase data through 10.04.2023.xlsx](https://github.com/zipkinlab/Archived-data/blob/master/Leuenberger_etal_2025_PNAS/IA%20IL%20MI%20Pollardbase%20data%20through%2010.04.2023.xlsx): Butterfly surveys (location, date, GPS coordinates, duration) and observations (species name, species code, number observed) from the Illinois Butterfly Monitoring Network, the Iowa Butterfly Survey Network, and the Michigan Butterfly Network. 
+3. [Pb-route-latlon-IA-IL-MI.xlsx](https://github.com/zipkinlab/Archived-data/blob/master/Leuenberger_etal_2025_PNAS/Pb-route-latlon-IA-IL-MI.xlsx): Survey-level information (route, state, county, GPS location) from the Illinois Butterfly Monitoring Network, the Iowa Butterfly Survey Network, and the Michigan Butterfly Network
+4. [GU Ohio 2022 Flat File All Observations.xlsx](https://github.com/zipkinlab/Archived-data/blob/master/Leuenberger_etal_2025_PNAS/GU%20Ohio%202022%20Flat%20File%20All%20Observations.xlsx): Butterfly surveys (location, date, GPS coordinates, duration) and observations (species name, species code, number observed) from the Ohio Lepidopterists. 
 
 ### Covariate data
 1. [CountyCovariates_percOpenNoWaterNoUrb.csv](Data/CountyCovariates_percOpenNoWaterNoUrb.csv): County-level data on proportion of open land, excluding water and urban land covers.
