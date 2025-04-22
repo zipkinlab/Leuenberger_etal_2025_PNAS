@@ -1,0 +1,10 @@
+## Tables
+.csv versions of the tables in the supplementary information. 
+1. [S1_Table_Richness.csv](Tables/S1_Table_Richness.csv): Median trends in species richness for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+2. [S2_Table_Diversity.csv](Tables/S2_Table_Diversity.csv): Median trends in species evenness for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+3. [S3_Table_Abundance.csv](Tables/S3_Table_Abundance.csv): Median trends in abundance for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+4. [S4_Table_SpeciesAbundance.csv](Tables/S4_Table_SpeciesAbundance.csv): Median trends in abundance for each butterfly species in the Midwestern United States, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+5. [S5_Table_SurveyStats.csv](Tables/S5_Table_SurveyStats.csv): Summary of available data from five different volunteer-based monitoring programs in the Midwestern U.S. 
+6. [S6_Table_SurveyYears.csv](Tables/S6_Table_SurveyYears.csv): Number, proportion, and cumulative proportion of butterfly surveys in the Midwestern United States from 1977-2023. 
+7. [S7_Table_SpeciesGroupings.csv](Tables/S7_Table_SpeciesGroupings.csv): Scientific names, functional groupings, and traits for the 136 species of butterflies in our analysis of butterfly surveys from 1992-2023 in the Midwestern U.S. 
+8. [S8_Table_SpeciesObservations.csv](Tables/S8_Table_SpeciesObservations.csv): Scientific names, common names, and a summary of observations for the 136 species of butterflies in our analysis of butterfly surveys from 1992-2023 in the Midwestern U.S. 
