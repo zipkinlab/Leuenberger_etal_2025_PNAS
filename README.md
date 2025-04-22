@@ -67,6 +67,17 @@ Proprietary; see below for data availability statement
 4. [TraitsButterflyCrossley.csv](https://github.com/zipkinlab/Leuenberger_etal_2025_PNAS/blob/main/Data/TraitsButterflyCrossley.csv): Trait data from [Crossley et al. 2025](https://onlinelibrary.wiley.com/doi/10.1111/gcb.15582), [GitHub repo](https://github.com/mcrossley3/NorthAmericanButterflies/tree/master), used to check a couple of overwintering stages (diapause).
 5. [CountyKey.RData](Data/CountyKey.RData): County indicator and county name, used to keep track of which county is which during post-processing. Originally created in [TryModel_spAbundance.R](Code/R/TryModel_spAbundance.R), line 214 (commented out)
 
+## Tables
+.csv versions of the tables in the supplementary information. 
+1. [S1_Table_Richness.csv](Tables/S1_Table_Richness.csv): Median trends in species richness for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+2. [S2_Table_Diversity.csv](Tables/S2_Table_Diversity.csv): Median trends in species evenness for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+3. [S3_Table_Abundance.csv](Tables/S3_Table_Abundance.csv): Median trends in abundance for each functional group, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+4. [S4_Table_SpeciesAbundance.csv](Tables/S4_Table_SpeciesAbundance.csv): Median trends in abundance for each butterfly species in the Midwestern United States, with 95% credible intervals and the probability of a declining trend (proportion of the posterior distribution <0). 
+5. [S5_Table_SurveyStats.csv](Tables/S5_Table_SurveyStats.csv): Summary of available data from five different volunteer-based monitoring programs in the Midwestern U.S. 
+6. [S6_Table_SurveyYears.csv](Tables/S6_Table_SurveyYears.csv): Number, proportion, and cumulative proportion of butterfly surveys in the Midwestern United States from 1977-2023. 
+7. [S7_Table_SpeciesGroupings.csv](Tables/S7_Table_SpeciesGroupings.csv): Scientific names, functional groupings, and traits for the 136 species of butterflies in our analysis of butterfly surveys from 1992-2023 in the Midwestern U.S. 
+8. [S8_Table_SpeciesObservations.csv](Tables/S8_Table_SpeciesObservations.csv): Scientific names, common names, and a summary of observations for the 136 species of butterflies in our analysis of butterfly surveys from 1992-2023 in the Midwestern U.S. 
+
 ## Data availability statement:
 Covariate data and data regarding butterfly names and groupings are available at this GitHub repository: [https://github.com/zipkinlab/Leuenberger_etal_2025_PNAS](https://github.com/zipkinlab/Leuenberger_etal_2025_PNAS). Butterfly data are proprietary and were obtained from the North American Butterfly Association (https://www.naba.org/), the Iowa Butterfly Survey Network (https://www.reimangardens.com/collections/insects/iowa-butterfly-survey-network/), the Illinois Butterfly Monitoring Network (https://bfly.org/), the Michigan Butterfly Network (https://michiganbutterfly.org/) and the Ohio Lepidopterists (http://www.ohiolepidopterists.org/). These data may be available upon reasonable request to LR and with permission from the aforementioned programs.
 

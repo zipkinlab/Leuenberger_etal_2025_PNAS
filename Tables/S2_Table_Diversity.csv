@@ -1,0 +1,15 @@
+Name,NSpp,trend.est,CredInt,trend.prob.neg
+Overall,136,3.31,(2.06 to 4.62),0.00
+Migratory,21,0.59,(0.35 to 0.80),0.00
+Residents,115,0.99,(0.80 to 1.20),0.00
+Generalists,60,0.94,(0.75 to 1.12),0.00
+Specialists,76,0.94,(0.72 to 1.18),0.00
+Multivoltine,102,0.81,(0.66 to 0.97),0.00
+Univoltine,34,0.64,(0.36 to 0.91),0.00
+Common,34,0.97,(0.79 to 1.15),0.00
+Rare,34,-0.71,(-1.20 to -0.15),0.99
+OverwinterEgg,13,-0.15,(-0.46 to 0.20),0.81
+OverwinterLarva,66,1.09,(0.91 to 1.27),0.00
+OverwinterPL,9,-0.04,(-0.45 to 0.45),0.58
+OverwinterPupa,28,0.60,(0.35 to 0.85),0.00
+OverwinterAdult,20,0.55,(0.33 to 0.77),0.00
