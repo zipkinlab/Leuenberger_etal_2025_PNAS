@@ -41,9 +41,9 @@ Insects are declining worldwide. These declines have been documented across taxo
     2. [Map_Figure1.R](Code/R/Map_Figure1.R): Takes survey data and creates a map of the number of surveys per location (Figure 1). 
 6. Batch files for super computer:
     Note: likely specific to MSU's ICER HPCC at the time of running. It might be a helpful starting place but wouldn't be ready to use as-is. 
-    1. [run_BCSmodel_msAbund.sb](run_BCSmodel_msAbund.sb): Runs the code in [TryModel_spAbundance.R](R/TryModel_spAbundance.R). Runs one chain; run command 5 times to run 5 chains.
-    2. [run_UpdateModel.sb](run_UpdateModel.sb): Runs the code in [UpdateModel_spAbundance.R](R/UpdateModel_spAbundance.R). Updates the specified chain only. 
-    3. [run_PostProcess.sb](run_PostProcess.sb): Runs the code in [PostProcess_MsAbund.R](R/PostProcess_MsAbund.R)
+    1. [run_BCSmodel_msAbund.sb](Code/run_BCSmodel_msAbund.sb): Runs the code in [TryModel_spAbundance.R](Code/R/TryModel_spAbundance.R). Runs one chain; run command 5 times to run 5 chains.
+    2. [run_UpdateModel.sb](Code/run_UpdateModel.sb): Runs the code in [UpdateModel_spAbundance.R](Code/R/UpdateModel_spAbundance.R). Updates the specified chain only. 
+    3. [run_PostProcess.sb](Code/run_PostProcess.sb): Runs the code in [PostProcess_MsAbund.R](Code/R/PostProcess_MsAbund.R)
 
 *Note that additional folders (e.g. 'Output', 'Output/1_runs') would be necessary to save output from the Post-process, Results, and Synthesis steps, as specified in the code.*
 
