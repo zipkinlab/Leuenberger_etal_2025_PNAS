@@ -19,6 +19,7 @@ Insects are declining worldwide. These declines have been documented across taxo
 
 1. [Code](Code): Contains all code files used for the project
 2. [Data](Data): Contains publicly available data files use for the project
+3. [Tables](Tables): Contains supplementary tables as csv files 
 
 -------------------------------------------------------------------------------
 
