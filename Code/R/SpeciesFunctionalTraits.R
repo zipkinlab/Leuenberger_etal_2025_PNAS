@@ -1,8 +1,9 @@
 ## Functional groups ####
 Groups <- read_csv(paste0(path, 'Data/ButterflyTraitGroups.csv'))
 # Overwintering group
-# Overwinter <- read_csv(paste0(path, 'Data/sbus.traits_w_disturb.nov2023.csv'))
-Overwinter <- read_csv('Data/sbus.traits_w_disturb.nov2023.csv') %>% 
+# Data are from LepTraits, though accessed through the SBUS paper
+# Overwinter <- read_csv(paste0(path, 'Data/traits_w_disturb.nov2023.csv'))
+Overwinter <- read_csv('Data/traits_w_disturb.nov2023.csv') %>% 
   rename(Code = code)
 Groups %<>% 
   left_join(Overwinter[,c('Code', 'diapause')])
@@ -10,13 +11,13 @@ Groups %<>%
 NoOverwinter <- Groups %>% 
   filter(is.na(diapause))
 # Some have codes in Mike's other file
-# OverwinterCrossley <- read_csv(paste0(path, 'Data/TraitsButterflyCrossley.csv'))
-OverwinterCrossley <- read_csv('Data/TraitsButterflyCrossley.csv') %>% 
+# Overwinter2 <- read_csv(paste0(path, 'Data/TraitsButterfly.csv'))
+Overwinter2 <- read_csv('Data/TraitsButterfly.csv') %>% 
   rename(Diapause = `overwintering stage`,
          ScientificName = 'Species')
-OverwinterCrossley$Diapause %<>% str_replace('P/L', 'PL')
+Overwinter2$Diapause %<>% str_replace('P/L', 'PL')
 Groups %<>% 
-  left_join(OverwinterCrossley[,c('ScientificName', "Diapause")])
+  left_join(Overwinter2[,c('ScientificName', "Diapause")])
 
 # Note: diapause recordings aren't the same
 Groups %>% 
@@ -26,7 +27,7 @@ Groups %<>%
   mutate(Overwinter = ifelse(
     # If the diapause column from Mike's SBUS paper is NA
     is.na(diapause), 
-    # Then grab the value from Mike's Crossley paper followup
+    # Then grab the value from Mike's other dataset
     Diapause, 
     # Otherwise (not NA), use the one from Mike's SBUS paper
     diapause))
@@ -43,7 +44,7 @@ Groups %<>%
 OverwinterDecision <- Groups %>% 
   select(Code, ScientificName, diapause, Diapause, Overwinter) %>% 
   rename(diapause_SBUS = diapause,
-         diapause_Crossley = Diapause,
+         diapause_2 = Diapause,
          Decision = Overwinter) 
 # write_csv(OverwinterDecision, 'Data/OverwinterDecision.csv')
 # Take out the intermediate columns
