@@ -4,6 +4,8 @@
 
 ### In revision
 
+### Code/Data DOI: [![DOI](https://zenodo.org/badge/970738694.svg)](https://doi.org/10.5281/zenodo.15270051)
+
 ### Please contact the first author for questions about the code or data: Wendy Leuenberger (leuenbe9@msu.edu)
 
 -------------------------------------------------------------------------------
