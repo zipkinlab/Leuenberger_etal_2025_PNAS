@@ -92,19 +92,6 @@ post.hoc.df.rich %<>%
          trend.025 = SppPerYear.025/Start * 100,
          trend.975 = SppPerYear.975/Start * 100) 
 
-# Table S1 ####
-TableRichness <- post.hoc.df.rich %>% 
-  bind_rows(post.hoc.df.all.combinable %>% 
-              filter(Metric == 'Richness')) %>% 
-  left_join(NSppGroup) %>% 
-  mutate(CredInt = paste0("(", trend.025 %>% round(2), " to ",
-                          trend.975 %>% round(2), ")")) %>% 
-  select(Name, NSpp, trend.est, CredInt, trend.prob.neg)
-# TableRichness %>%
-#   slice(14, 1:8, 10:13, 9) %>%
-#   write.csv(file = 'Output/10_CombinedRichness/GroupMeanRich.csv',
-#                         row.names = FALSE)
-
 
 ## Percent change for diversity ####
 if (exists('DiversityList') == FALSE) {
@@ -131,6 +118,34 @@ post.hoc.df.div %<>%
          trend.025 = SppPerYear.025/Start * 100,
          trend.975 = SppPerYear.975/Start * 100) %>% 
   mutate(Metric = 'Evenness')
+
+
+
+## Overall ####
+post.hoc.df.all.combinable <- post.hoc.df.all %>% 
+  rename(raw.trend.est = trend.est,
+         raw.trend.025 = trend.025,
+         raw.trend.975 = trend.975) %>% 
+  rename(trend.est = trend.est.real,
+         trend.025 = trend.025.real,
+         trend.975 = trend.975.real) %>% 
+  mutate(MeanCompare = 'Mean',
+         Name = 'Overall',
+         trend.prob.neg = 1-trend.prob.pos,
+         Metric = gsub(' trend', '', Metric))
+
+# Table S1 ####
+TableRichness <- post.hoc.df.rich %>% 
+  bind_rows(post.hoc.df.all.combinable %>% 
+              filter(Metric == 'Richness')) %>% 
+  left_join(NSppGroup) %>% 
+  mutate(CredInt = paste0("(", trend.025 %>% round(2), " to ",
+                          trend.975 %>% round(2), ")")) %>% 
+  select(Name, NSpp, trend.est, CredInt, trend.prob.neg)
+# TableRichness %>%
+#   slice(14, 1:8, 10:13, 9) %>%
+#   write.csv(file = 'Output/10_CombinedRichness/GroupMeanRich.csv',
+#                         row.names = FALSE)
 
 # Table S2 ####
 TableDiversity <- post.hoc.df.div %>% 
@@ -161,18 +176,6 @@ TableAbundance <- post.hoc.df.abund %>%
 
 
 
-## Overall ####
-post.hoc.df.all.combinable <- post.hoc.df.all %>% 
-  rename(raw.trend.est = trend.est,
-         raw.trend.025 = trend.025,
-         raw.trend.975 = trend.975) %>% 
-  rename(trend.est = trend.est.real,
-         trend.025 = trend.025.real,
-         trend.975 = trend.975.real) %>% 
-  mutate(MeanCompare = 'Mean',
-         Name = 'Overall',
-         trend.prob.neg = 1-trend.prob.pos,
-         Metric = gsub(' trend', '', Metric))
 
 post.hoc.df <- post.hoc.df.abund %>% 
   bind_rows(post.hoc.df.rich) %>% 
@@ -443,17 +446,30 @@ p <- post.hoc.df.mean %>%
     # panel.border = element_rect(color = "blue", fill = NA),
     panel.spacing.x=unit(1, "lines"),
     panel.spacing.y=unit(0, "lines"),
-    axis.title.x = element_text(vjust = -1),
-    axis.text.x = element_text(vjust = -1),
+    axis.title.x = element_text(vjust = -2.5),
+    axis.text.x = element_text(vjust = -2.5),
     legend.key.size = unit(0.5, 'cm'),
     #legend.position = c(0.1, 0.6),
     legend.title = element_text(size = 8),
     legend.text = element_text(size = 6),
-    plot.margin = margin(0,0,4,1,"pt")
+    plot.margin = margin(t = 0,
+                         r = 0,
+                         b = 9,
+                         l = 2,
+                         "pt")
   ) 
 
 p
 
+ggsave(filename = 'Output/trend-figures/PNAS_Figure2.eps',
+       device = 'eps',
+       plot = p,
+       width = 178, height = 208, units = 'mm')
+
+ggsave(filename = 'Output/trend-figures/PNAS_Figure2.jpg',
+       device = 'jpg',
+       plot = p,
+       width = 178, height = 208, units = 'mm')
 
 ggsave(filename = "Output/trend-figures/CommunityMetrics.jpg", plot = p, width = 6, height = 7)
 

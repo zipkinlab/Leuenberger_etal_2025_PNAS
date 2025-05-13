@@ -752,22 +752,26 @@ Trends %>%
              color = ProbDecreasing,
              group = Species
            )) +
-      geom_line(alpha = 0.7) + 
+      geom_line(linewidth = 0.25) + 
+      # geom_line(alpha = 0.7) + 
       theme_bw(base_size = 12) +  # for small (90 mm) figure
       # tbw +
       scale_color_gradient2(midpoint = 0.5,
                             low = colors[8], mid = 'grey', high = colors[1],
                             limits = c(0,1)) +
+      scale_y_continuous(limits = c(0, 1.6),
+                         sec.axis = sec_axis(~ ., labels = NULL)) +
       # colScale +
       # scale_color_grey() +  # If color is DiffZero
       theme(legend.position = 'bottom', # panel.grid = element_blank(),
             # panel.grid.major.y = element_blank(),
             panel.grid = element_blank()) +
-      ylim(0, 1.6) +
+      # ylim(0, 1.6) +
       xlim(1992, 2023) +
       # guides(color = guide_legend(nrow = 2)) +
       labs(y = 'Standardized abundance',
            color = 'Probability of decline')
+    Fanned
     # ggsave(filename = 'Output/trend-figures/StandardizedAbundance.jpg',
     #                     height = 90, width = 90, units = 'mm')
     # ggsave(filename = 'Output/trend-figures/StandardizedAbundance.pdf',
@@ -786,6 +790,10 @@ ggsave(filename = 'Output/trend-figures/SpeciesTrendCombinedVertical.jpg',
        width = 180, height = 90, units = 'mm')
 ggsave(filename = 'Output/trend-figures/SpeciesTrendCombinedHorizontal2.jpg',
        width = 180, height = 90, units = 'mm')
+# Publication quality
+ggsave(filename = 'Output/trend-figures/PNAS_Figure3.eps',
+       device = 'eps',
+       width = 178, height = 89, units = 'mm')
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
